@@ -1,0 +1,121 @@
+/* ============================================
+   ESTILOS GENERALES DEL SITIO
+   ============================================ */
+
+/* Estilos del cuerpo principal */
+body {
+    font-family: "Georgia", serif;
+    background-color: #ffffff;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del logo principal */
+.logo{
+    font-size: 60px;
+    color: #000;
+    text-align: center;
+    font-family:'Times New Roman', serif;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+/* Línea divisoria doble */
+hr.double-line {
+    border: none;
+    border-top: 4px double #000;
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   ESTILOS DE ARTÍCULOS
+   ============================================ */
+
+/* Título del artículo principal */
+.title-article{
+    text-align: left;
+    border-bottom: 1px solid #000;
+    padding: 10px
+}
+
+/* Párrafo de introducción destacado */
+.introduction{
+    background-color: #f4f4f4;
+    font-style: italic;
+    padding: 10px;
+}
+
+/* Cuadro de información del editor */
+.info-padding{
+    border: 1px solid #333;
+    padding: 40px;
+    margin: 15px 0;
+}
+
+/* ============================================
+   ESTILOS DE SECCIONES LATERALES
+   ============================================ */
+
+/* Sección de anuncios publicitarios */
+.anuncio-margin{
+    border: 1px solid #999;
+    margin: 50px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ============================================
+   ESTILOS DE TABLAS
+   ============================================ */
+
+/* Tabla de elementos con bordes */
+.table-elements, .table-elements th, .table-elements td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 8px;
+    width: 100%;
+}
+
+/* Fecha del sitio */
+.fecha-nyt{
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   ESTILOS INTERACTIVOS
+   ============================================ */
+
+/* Efecto hover (al pasar el mouse) */
+.btn-hover-1:hover, .box-hover-2:hover {
+    color: #fff;
+    background-color: #326891;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Efecto active (al hacer clic) */
+.btn-click-1:active, .box-click-2:active {
+    color: #ffff00;
+    background-color: #000;
+    font-size: 10px
+}
+
+/* ============================================
+   ESTILOS DE POSICIONAMIENTO FIJO
+   ============================================ */
+
+/* Widget de noticias en vivo en esquina fija */
+.news-fixed{
+    position: fixed;
+    bottom: 0;
+    right: 10;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    border: 1px solid white;
+    z-index: 100;
+}
