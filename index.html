@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
@@ -7,14 +8,14 @@
     <meta name="author" content="Victor Estarlin Sepulveda Lopez / 24-1091">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    
-
     <title>The Science Times</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
 
     <!-- Importar hoja de estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body class="bg-light">
     <!-- Encabezado principal del sitio web -->
     <header class="nyt-header">
         <h1 class="logo">THE SCIENCE TIMES</h1>
@@ -22,88 +23,442 @@
         <p class="fecha-nyt">Fecha actual</p>
         <hr class="double-line">
     </header>
-    <!-- Contenedor principal del contenido -->
-    <main class="principal-container">
-        <!-- Artículo principal con información sobre neurociencia -->
-        <article class="principal-article">
-            <h2 class="title-article">La Neurociencia en la Era Moderna</h2>
-            <p class="introduction">Un análisis profundo sobre cómo el cerebro procesa la información en milisegundos.</p>
-            <!-- Nota del editor destacada -->
-            <div class="info-padding">
-                <p>Nota del editor: Este estudio fue realizado por universidades líderes.</p>
-            </div>  
-            <h3>Pasos del estudio:</h3>
-            <!-- Lista ordenada con los pasos del estudio -->
-            <ol>
-                <li>Recopilación de datos neuronales.</li>
-                <li>Análisis de sinapsis.</li>
-                <li>Publicación de resultados.</li>
-            </ol>
-        </article>
 
-        <!-- Sección lateral con anuncios y contenido adicional -->
-        <section class="section-lateral">
-            <!-- Sección de publicidad -->
-            <div class="anuncio-margin">
-                <p>Publicidad: Suscríbete para más ciencia.</p>
+    <!-- Modal de términos y condiciones para suscripción -->
+    <div class="modal" tabindex="-1" id="miModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terminos y condiciones de suscripción</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Al hacer clic en "Aceptar", te suscribes a nuestro boletín de noticias. Nos comprometemos a enviarte únicamente contenido relevante sobre física y computación. 
+                        Tus datos están protegidos bajo nuestra política de privacidad: no compartimos tu información con terceros y puedes darte de baja en cualquier momento haciendo 
+                        clic en el enlace al pie de nuestros correos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Rechazar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <h3>Ramas destacadas:</h3>
-            <!-- Lista de ramas científicas destacadas -->
-            <ul>
-                <li>Física Cuántica</li>
-                <li>Biología Marina</li>
-                <li>Astrofísica</li>
-            </ul>
+    <!-- Barra de navegación principal -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
 
-            <!-- Tabla con información de elementos -->
-            <table class="table-elements">
-                <caption>Resumen de Elementos</caption>
-                <tr>
-                    <th>Elemento</th>
-                    <th>Peso</th>
-                </tr>
-                <tr>
-                    <td>Oxigeno</td>
-                    <td>15.99</td>
-                </tr>
-            </table>
-        </section>
+            <!-- Botón para desplegar menú en dispositivos móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Sección con elementos interactivos -->
-        <section class="interactives">
-            <h3>Interactúa con las noticias:</h3>
-            <!-- Elementos con efectos hover (cambio al pasar el mouse) -->
-            <button class="btn-hover-1">Leer más tarde</button>
-            <div class="box-hover-2">Pasa el mouse aquí</div>
+            <!-- Elementos de navegación (menú principal) -->
+            <div class="collapse navbar-collapse justify-content-evenly" id="navbarContenido">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active text-dark" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#">Astrofisica</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#">Computación Cuántica</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#">IA</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#">Ciberseguridad</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#">Hardware</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#">Laboratorio</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark" href="#">Noticias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <hr class="double-line">
 
-            <!-- Elementos con efectos click (cambio al hacer clic) -->
-            <button class="btn-click-1">Compartir noticia</button>
-            <div class="box-click-2" tabindex="0">Haz clic para expandir</div>
-        </section>
+    <!-- Contenedor principal del contenido -->
+    <main>
+        <div class="container-fluid mx-auto">
+            <div class="row">
+                <!-- Tarjeta principal con noticia sobre programa Artemis -->
+                <div class="col-5">
+                    <!-- Tarjeta de Bootstrap con imagen, título y descripción -->
+                    <div class="card mb-3">
+                        <img src="images/artemis III.jpeg" class="card-img-top" alt="imagen de artemis III">
+                        <div class="card-body">
+                            <!-- Título principal de la noticia -->
+                            <h5 class="card-title">La NASA añade abruptamente un nuevo paso en su camino hacia el
+                                alunizaje mientras se avecina una carrera con China</h5>
+                            <p class="card-text">La NASA reestructura el programa Artemis: se añade una misión tripulada
+                                adicional en 2027 antes de intentar el próximo alunizaje.
+                                Conoce los detalles del cambio de planes y los retos técnicos que enfrentan SpaceX y
+                                Blue Origin.</p>
+                            <p class="card-text"><small class="text-body-secondary">Última actualización hace 3
+                                    minutos</small></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta con noticia sobre astronauta Mike Fincke -->
+                <div class="col-5">
+                    <!-- Tarjeta de Bootstrap con imagen, título y descripción -->
+                    <div class="card mb-3">
+                        <img src="images/mike fincke.jpg" class="card-img-top" alt="imagen de Mike Fincke">
+                        <div class="card-body">
+                            <!-- Título de la noticia sobre incidente médico -->
+                            <h5 class="card-title">El astronauta Mike Fincke confirma que su problema médico forzó el
+                                fin anticipado de la misión de la NASA</h5>
+                            <p class="card-text">El veterano astronauta Mike Fincke confirma ser el protagonista del
+                                reciente incidente médico en la Estación Espacial Internacional.
+                                Este suceso marca la primera vez en la historia que la NASA debe acortar una misión por
+                                razones de salud.</p>
+                            <p class="card-text"><small class="text-body-secondary">Última actualización hace 3
+                                    minutos</small></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna lateral con noticias secundarias -->
+                <div class="col-2">
+                    <!-- Primera tarjeta: Noticia sobre investigación de Europa contra X -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="images/grook.jpg" class="card-img-top" alt="imagen de Grok">
+                                <div class="card-body">
+                                    <!-- Título sobre investigación de privacidad de X por IA Grok -->
+                                    <h5 class="card-title">Europa inicia una investigación masiva contra X por fallos de
+                                        privacidad.</h5>
+                                    <p class="card-text">Europa investiga a X por la generación de imágenes sexualizadas
+                                        mediante su IA Grok.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <!-- Título sobre dimisión del CEO del Foro Económico Mundial -->
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="images/foto economico.jpg" class="card-img-top"
+                                    alt="imagen de foto economico">
+                                <div class="card-body">
+                                    <h5 class="card-title">Los archivos de Epstein le cuestan el puesto al CEO del Foro
+                                        Económico Mundial de Davos</h5>
+                                    <p class="card-text">Los archivos de Epstein fuerzan la dimisión del presidente del
+                                        Foro Económico Mundial.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección con carrusel de imágenes y descripción de la plataforma -->
+        <div class="text-center">
+            <div class="row">
+                <!-- Columna izquierda: Carrusel Bootstrap con imágenes -->
+                <div class="col-6">
+                    <!-- Contenedor principal del carrusel con ID único para referencias -->
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide m-4">
+                    
+                    <!-- Indicadores del carrusel: puntos de navegación para cada slide -->
+                    <div class="carousel-indicators">
+                        <!-- Indicador para el slide 1 (activo por defecto) -->
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <!-- Indicador para el slide 2 -->
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <!-- Indicador para el slide 3 -->
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    
+                    <!-- Contenedor con los slides (elementos intercambiables) -->
+                    <div class="carousel-inner">
+                        <!-- SLIDE 1: Estudiantes en laboratorio de física (activo por defecto) -->
+                        <!-- data-bs-interval="10000" = el slide se muestra durante 10 segundos -->
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <!-- Imagen del slide con clase w-100 para ancho completo -->
+                            <img src="images/estudiantes-exploracion-cuantica-laboratorio-fisica_839035-738902.avif"
+                                class="d-block w-100" alt="imagen, estudiantes en laboratorio de física">
+                            <!-- Leyenda sobre la imagen (visible solo en pantallas medianas y mayores) -->
+                            <div class="carousel-caption d-none d-md-block">
+                                <!-- Botón que abre un popover con información sobre la imagen -->
+                                <button type="button" 
+                                        class="btn btn-lg btn-danger" 
+                                        data-bs-toggle="popover" 
+                                        data-bs-title="Popover title" 
+                                        data-bs-content="Imagen relacionada con ciencia">Click aqui para ver descripción</button>
+                                <!-- Enlace que abre el modal de suscripción -->
+                                <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- SLIDE 2: Otro momento del laboratorio de física -->
+                        <!-- data-bs-interval="2000" = el slide se muestra durante 2 segundos -->
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <!-- Imagen del segundo slide -->
+                            <img src="images/estudiantes-exploracion-cuantica-laboratorio-fisica_839035-739135.avif"
+                                class="d-block w-100" alt="imagen, estudiantes en laboratorio de física">
+                            <!-- Leyenda del segundo slide con botones interactivos -->
+                            <div class="carousel-caption d-none d-md-block">
+                                <!-- Botón de descripción -->
+                                <button type="button"
+                                        class="btn btn-lg btn-danger" 
+                                        data-bs-toggle="popover" 
+                                        data-bs-title="Popover title" 
+                                        data-bs-content="Imagen relacionada con ciencia">Click aqui para ver descripción</button>
+                                <!-- Enlace de suscripción -->
+                                <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- SLIDE 3: Científicos explorando el cosmos -->
+                        <div class="carousel-item">
+                            <!-- Imagen del tercer slide (sin data-bs-interval, usa el intervalo por defecto) -->
+                            <img src="images/explorando-cosmos-noche-cientificos-laboratorio_1164924-17751.avif"
+                                class="d-block w-100" alt="imagen, explorando el cosmos en una noche de laboratorio">
+                            <!-- Leyenda del tercer slide -->
+                            <div class="carousel-caption d-none d-md-block">
+                                <!-- Botón para ver descripción de la imagen -->
+                                <button type="button"
+                                        class="btn btn-lg btn-danger" 
+                                        data-bs-toggle="popover" 
+                                        data-bs-title="Popover title" 
+                                        data-bs-content="Imagen relacionada con ciencia">Click aqui para ver descripción</button>
+                                <!-- Enlace para suscripción -->
+                                <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botón para retroceder al slide anterior -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <!-- Icono de flecha izquierda -->
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <!-- Texto para lectores de pantalla -->
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    
+                    <!-- Botón para avanzar al siguiente slide -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <!-- Icono de flecha derecha -->
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <!-- Texto para lectores de pantalla -->
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+                </div>
+                
+                <!-- Columna derecha: Descripción y propósito del sitio web -->
+                <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                    <!-- Título principal que expresa el concepto del sitio -->
+                    <h2 class="display-4">El Nexo entre la Materia y el Código</h2>
+                    <!-- Párrafo descriptivo con la misión de la plataforma -->
+                    <p class="h3 text-center mt-4 fw-normal text-muted" style="font-family: Arial, Helvetica, sans-serif;">Somos un espacio dedicado a explorar las fronteras del conocimiento humano. 
+                        En nuestra plataforma, la física fundamental y la computación de vanguardia convergen para explicar el mundo que nos rodea. 
+                        Desde las leyes que rigen el cosmos hasta los algoritmos que definen nuestro futuro digital, 
+                        buscamos hacer de la ciencia un lenguaje accesible y apasionante para todos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de preguntas frecuentes con acordeón interactivo -->
+        <div class="preguntas-frecuentes justify-content-center mb-4">
+            <!-- Título principal de la sección -->
+            <h1>Preguntas frecuentes</h1>
+            <!-- Acordeón Bootstrap: componente que permite expandir/contraer elementos -->
+            <div class="accordion container" id="accordionPanelsStayOpenExample">
+            
+            <!-- PREGUNTA 1: Objetivo del sitio web -->
+            <div class="accordion-item">
+                <!-- Encabezado del acordeón -->
+                <h2 class="accordion-header">
+                <!-- Botón colapsable: cuando se hace clic, expande o contrae la respuesta -->
+                <!-- data-bs-toggle="collapse" activa la funcionalidad de colapso -->
+                <!-- data-bs-target="#panelsStayOpen-collapseOne" vincula este botón con su contenido correspondiente -->
+                <!-- aria-expanded="true" indica que el elemento está expandido por defecto -->
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    ¿Cuál es el objetivo principal de este sitio web?
+                </button>
+                </h2>
+                <!-- Contenedor que se expande/contrae al hacer clic en el botón -->
+                <!-- La clase "show" hace que esté expandido por defecto -->
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <!-- Cuerpo del acordeón con la respuesta a la pregunta -->
+                <div class="accordion-body">
+                    Nuestra misión es explorar la intersección entre las leyes fundamentales de la física y el poder de la computación. 
+                    Buscamos divulgar avances científicos y tecnológicos de manera clara, desde la mecánica cuántica hasta el desarrollo de inteligencia artificial.
+                </div>
+                </div>
+            </div>
+            
+            <!-- PREGUNTA 2: Nivel de conocimientos requerido -->
+            <div class="accordion-item">
+                <!-- Encabezado del acordeón para la segunda pregunta -->
+                <h2 class="accordion-header">
+                <!-- Botón colapsable para la segunda pregunta -->
+                <!-- data-bs-target="#panelsStayOpen-collapseTwo" vincula este botón con su respuesta -->
+                <!-- La clase "collapsed" indica que está contraído por defecto -->
+                <!-- aria-expanded="false" confirma que el elemento está contraído -->
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    ¿Necesito conocimientos avanzados para entender el contenido?
+                </button>
+                </h2>
+                <!-- Contenedor colapsable para la segunda respuesta (contraído por defecto) -->
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <!-- Cuerpo con la respuesta a la segunda pregunta -->
+                <div class="accordion-body">
+                    No. Aunque tratamos temas complejos, nuestros artículos están redactados para ser accesibles tanto para entusiastas que están comenzando como para estudiantes 
+                    de ciencias e ingeniería que buscan profundizar en conceptos específicos.
+                </div>
+                </div>
+            </div>
+            
+            <!-- PREGUNTA 3: Frecuencia de actualizaciones -->
+            <div class="accordion-item">
+                <!-- Encabezado del acordeón para la tercera pregunta -->
+                <h2 class="accordion-header">
+                <!-- Botón colapsable para la tercera pregunta -->
+                <!-- data-bs-target="#panelsStayOpen-collapseThree" vincula este botón con su respuesta -->
+                <!-- aria-expanded="false" indica que está contraído por defecto -->
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    ¿Con qué frecuencia se actualizan las noticias y artículos?
+                </button>
+                </h2>
+                <!-- Contenedor colapsable para la tercera respuesta -->
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <!-- Cuerpo con la respuesta a la tercera pregunta -->
+                <div class="accordion-body">
+                    Mantenemos un ritmo de actualización constante. Publicamos análisis detallados y noticias de última hora 
+                    —como las misiones Artemis de la NASA o regulaciones de IA en Europa— de forma semanal.
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
 
         <!-- Sección con contenido multimedia (video) -->
         <section class="multimedia">
             <h3>Video: El Futuro del Diseño Web</h3>
             <!-- Insertar video de YouTube -->
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/wZniZEbPAzk?si=FfziH2dMP-VOwnX_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="60%" height="600" src="https://www.youtube.com/embed/wZniZEbPAzk?si=FfziH2dMP-VOwnX_"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
 
         <!-- Sección con mapa de ubicación -->
-        <section class="location">
+        <section class="multimedia">
             <h3>Visítanos en nuestra sede</h3>
             <!-- Insertar mapa de Google Maps -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123!2d-69.940!3d18.484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf898444a77323%3A0x1384061807d9f957!2sUNPHU!5e0!3m2!1ses!2sdo!4v1620000000000!5m2!1ses!2sdo" width="100%" height="200" style="border:0;" allowfullscreen=""></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123!2d-69.940!3d18.484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf898444a77323%3A0x1384061807d9f957!2sUNPHU!5e0!3m2!1ses!2sdo!4v1620000000000!5m2!1ses!2sdo"
+                width="60%" height="600" style="border:0;" allowfullscreen=""></iframe>
         </section>
     </main>
     <!-- Widget fijo en la esquina inferior derecha (noticia en vivo) -->
     <div class="news-fixed">
         <p>En vivo</p>
         <!-- Video en vivo incrustado -->
-        <iframe width="120" height="70" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=J9nOCsZWVYISWZnF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="150" height="100" src="https://www.youtube.com/embed/gsMofms3Ztg?si=fNGbj4QF8_E1UUHr"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Sección de formulario de contacto para que los usuarios envíen consultas -->
+    <div class="contactanos">
+        <!-- Título principal de la sección de contacto -->
+        <h2 class="container">Contacto</h2>
+        <!-- Formulario Bootstrap con contenedor centrado -->
+        <form class = "container">
+        
+        <!-- CAMPO 1: Dirección de correo electrónico -->
+        <div class="mb-3">
+            <!-- Etiqueta para el campo de email (mb-3 = margen inferior de 3 unidades) -->
+            <label for="exampleInputEmail1" class="form-label">Dirección de correo electronico</label>
+            <!-- Campo de entrada de email con validación HTML5 -->
+            <!-- aria-describedby="emailHelp" vincula esta entrada con el texto de ayuda -->
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- Texto de ayuda que aparece debajo del campo -->
+            <div id="emailHelp" class="form-text">Tu correo no será compartido con terceros.</div>
         </div>
+        
+        <!-- CAMPO 2: Textarea para describir la inquietud/mensaje del usuario -->
+        <div class="mb-3">
+            <!-- Etiqueta para el área de texto -->
+            <label for="exampleInputPassword1" class="form-label">Describe tu inquietud</label>
+            <!-- Área de texto para que el usuario escriba su mensaje (múltiples líneas) -->
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        
+        <!-- CAMPO 3: Checkbox para consentimiento de notificaciones -->
+        <div class="mb-3 form-check">
+            <!-- Checkbox que permite al usuario optar por recibir notificaciones -->
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <!-- Etiqueta asociada al checkbox -->
+            <label class="form-check-label" for="exampleCheck1">Deseo recibir notificaciones</label>
+        </div>
+        
+        <!-- BOTÓN DE ENVÍO -->
+        <!-- El atributo id="mostrarAlerta" vincula este botón con el JavaScript para mostrar la alerta -->
+        <button type="button" class="btn btn-primary" id="mostrarAlerta">Enviar</button>
+        </form>
+    </div>
+
+    <!-- ALERTA DE CONFIRMACIÓN (inicialmente oculta con clase "d-none") -->
+    <!-- Esta alerta se muestra cuando el usuario hace clic en el botón "Enviar" -->
+    <!-- role="alert" asegura que los lectores de pantalla la anuncien como alerta -->
+    <!-- id="miAlerta" se usa para seleccionar este elemento en JavaScript -->
+    <div class="alert alert-warning alert-dismissible fade d-none mt-3 contactanos" role="alert" id="miAlerta">
+        <!-- Texto principal de la alerta -->
+        <!-- <strong> hace el texto más destacado -->
+        <strong>Completado</strong> Mensaje enviado correctamente. Nos pondremos en contacto contigo lo antes posible.
+        <!-- Botón para cerrar la alerta manualmente (data-bs-dismiss="alert" realiza esta acción) -->
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+
+
     <!-- Pie de página -->
     <footer>
     </footer>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script>
+    // Script para mostrar la alerta al pulsar el botón
+    document.getElementById("mostrarAlerta").addEventListener("click", function() {
+        document.getElementById("miAlerta").classList.remove("d-none");
+        document.getElementById("miAlerta").classList.add("show");
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Selecciona todos los elementos con data-bs-toggle="popover"
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+            });
+            });
+
+    </script>
+
+
 </body>
+
 </html>

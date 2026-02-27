@@ -7,7 +7,7 @@ body {
     font-family: "Georgia", serif;
     background-color: #ffffff;
     color: #333;
-    max-width: 1000px;
+    max-width: auto;
     margin: 0 auto;
     padding: 20px;
 }
@@ -89,7 +89,7 @@ hr.double-line {
    ESTILOS INTERACTIVOS
    ============================================ */
 
-/* Efecto hover (al pasar el mouse) */
+/* Efecto hover (al pasar el mouse) sobre botones e cajas */
 .btn-hover-1:hover, .box-hover-2:hover {
     color: #fff;
     background-color: #326891;
@@ -97,7 +97,7 @@ hr.double-line {
     cursor: pointer;
 }
 
-/* Efecto active (al hacer clic) */
+/* Efecto active (al hacer clic) sobre botones e cajas */
 .btn-click-1:active, .box-click-2:active {
     color: #ffff00;
     background-color: #000;
@@ -108,14 +108,32 @@ hr.double-line {
    ESTILOS DE POSICIONAMIENTO FIJO
    ============================================ */
 
-/* Widget de noticias en vivo en esquina fija */
+/* Widget de noticias en vivo en esquina fija (siempre visible) */
 .news-fixed{
     position: fixed;
-    bottom: 0;
-    right: 10;
+    bottom: 100px;
+    right: 10px;
     background: #000;
     color: #fff;
     padding: 5px;
     border: 1px solid white;
     z-index: 100;
+}
+
+/* Efecto de elevación al pasar el mouse sobre tarjetas */
+.card:hover{
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+/* Estilos para la sección de contacto con márgenes laterales */
+.contactanos{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;    padding-top: 10px;
+}
+
+.multimedia{
+    padding-left: 20%;
+    padding-right: auto;
 }
