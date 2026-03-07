@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
-    <meta name="description" content="Terminos y condiciones de uso del sitio web The Science Times, incluyendo información sobre el uso de contenido, responsabilidades del usuario y limitaciones de responsabilidad.">
+    <meta name="description" content="Hub de divulgación sobre Neurociencia y Matemáticas">
     <meta name="author" content="Victor Estarlin Sepulveda Lopez / 24-1091">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>Términos y condiciones</title>
+    <title>Contacto</title>
     <link rel="icon" type="image/png" href="images/logo.png">
 
     <!-- Importar hoja de estilos CSS -->
@@ -62,49 +63,66 @@
     </nav>
     <hr class="double-line">
 
-    <h1>Términos y Condiciones de Uso</h1>
-    <h4>Última actualización: 3 de marzo de 2026.</h4>
+    <!-- Sección de formulario de contacto para que los usuarios envíen consultas -->
+    <div class="contactanos">
+        <!-- Título principal de la sección de contacto -->
+        <h2 class="container">Contacto</h2>
+        <!-- Formulario Bootstrap con contenedor centrado -->
+        <form action="mailto:starlin2404@gmail.com" method="post" enctype="text/plain" class = "container">
+        
+        <!-- CAMPO 1: Dirección de correo electrónico -->
+        <div class="mb-3">
+            <!-- Etiqueta para el campo de email (mb-3 = margen inferior de 3 unidades) -->
+            <label for="exampleInputEmail1" class="form-label">Dirección de correo electronico</label>
+            <!-- Campo de entrada de email con validación HTML5 -->
+            <!-- aria-describedby="emailHelp" vincula esta entrada con el texto de ayuda -->
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- Texto de ayuda que aparece debajo del campo -->
+            <div id="emailHelp" class="form-text">Tu correo no será compartido con terceros.</div>
+        </div>
 
-    <p>Bienvenido a The Science Times. Al acceder y utilizar este sitio, 
-        usted acepta cumplir con los siguientes términos y condiciones derivados del carácter educativo de este proyecto.</p>
+        <div class="mb-3">
+            <!-- Etiqueta para el campo de email (mb-3 = margen inferior de 3 unidades) -->
+            <label for="exampleInputphone" class="form-label">número de telefono</label>
+            <!-- Campo de entrada de email con validación HTML5 -->
+            <!-- aria-describedby="emailHelp" vincula esta entrada con el texto de ayuda -->
+            <input type="tel" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp">
+            <!-- Texto de ayuda que aparece debajo del campo -->
+            <div id="phoneHelp" class="form-text">Tu número de teléfono no será compartido con terceros.</div>
+        </div>
 
-    <h2>1. Naturaleza del Sitio</h2>
+        <div class="mb-3">
+            <!-- Etiqueta para el campo de email (mb-3 = margen inferior de 3 unidades) -->
+            <label for="exampleInputcountry" class="form-label">País</label>
+            <!-- Campo de entrada de email con validación HTML5 -->
+            <!-- aria-describedby="emailHelp" vincula esta entrada con el texto de ayuda -->
+            <input type="text" class="form-control" id="exampleInputcountry" aria-describedby="countryHelp">
+            <!-- Texto de ayuda que aparece debajo del campo -->
+            <div id="countryHelp" class="form-text">Por favor, ingresa tu país.</div>
+        </div>
+        
+        <!-- CAMPO 2: Textarea para describir la inquietud/mensaje del usuario -->
+        <div class="mb-3">
+            <!-- Etiqueta para el área de texto -->
+            <label for="exampleInputPassword1" class="form-label">Describe tu inquietud</label>
+            <!-- Área de texto para que el usuario escriba su mensaje (múltiples líneas) -->
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        
+        <!-- CAMPO 3: Checkbox para consentimiento de notificaciones -->
+        <div class="mb-3 form-check">
+            <!-- Checkbox que permite al usuario optar por recibir notificaciones -->
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <!-- Etiqueta asociada al checkbox -->
+            <label class="form-check-label" for="exampleCheck1">Deseo recibir notificaciones</label>
+        </div>
+        
+        <!-- BOTÓN DE ENVÍO -->
+        <!-- El atributo id="mostrarAlerta" vincula este botón con el JavaScript para mostrar la alerta -->
+        <button type="submit" class="btn btn-primary" id="mostrarAlerta">Enviar</button>
+        </form>
+    </div>
 
-    <p>Al ser un proyecto educativo alojado en GitHub bajo el repositorio The-Science-Scribe, 
-        no recolectamos datos personales identificables de manera automática, 
-        a menos que el usuario los proporcione voluntariamente a través de nuestros formularios de contacto.</p>
-    
-    <h2>2. Propiedad Intelectual</h2>
-    
-    <ul>
-        <li><strong>Contenido Propio:</strong> El diseño, la estructura CSS y la maquetación HTML son propiedad del desarrollador.</li>
-        <li><strong>Contenido de Terceros:</strong> Los videos y mapas integrados a través de iframes pertenecen a sus respectivos autores y plataformas (YouTube y Google Maps). 
-            El uso de estos elementos se realiza bajo la doctrina de "Uso Justo" con fines educativos.</li>
-    </ul>
-
-    <h2>3. Uso Permitido</h2>
-
-    <p>Los usuarios de este sitio se comprometen a:</p>
-    <ul>
-        <li>No utilizar el sitio para fines ilegales o no autorizados.</li>
-        <li>No intentar alterar el código fuente ni los archivos de estilo (.css) alojados en el servidor o repositorio.</li>
-        <li>Respetar la integridad de los elementos interactivos (efectos de clic y hover) diseñados para la evaluación técnica de la materia.</li>
-    </ul>
-
-    <h2>4. Limitaciones de Responsabilidad</h2>
-
-    <p>El desarrollador no se hace responsable por:</p>
-
-    <ol>
-        <li>Interrupciones en la disponibilidad del sitio debido a fallos en el hosting (como GitHub Pages).</li>
-        <li>La exactitud técnica de los datos científicos presentados en las tablas o artículos.</li>
-        <li>Cualquier cambio en los servicios externos que alimentan nuestros iframes.</li>
-    </ol>
-
-    <h2>Modificaciones</h2>
-    <p>Nos reservamos el derecho de modificar estos 
-        términos en cualquier momento para ajustarlos a nuevos requerimientos de la asignatura o cambios en la estructura del sitio web.</p>
-    
     <footer class="bg-dark text-light p-5 mt-5">
         <div class="text-center">
             <div class="row">

@@ -58,7 +58,7 @@
             <div class="collapse navbar-collapse justify-content-evenly" id="navbarContenido">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link active text-dark" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active text-dark" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link text-dark" href="#">Astrofisica</a>
@@ -94,7 +94,7 @@
                 <!-- Tarjeta principal con noticia sobre programa Artemis -->
                 <div class="col-5">
                     <!-- Tarjeta de Bootstrap con imagen, título y descripción -->
-                    <div class="card mb-3">
+                    <div class="card mb-3" id="post-1">
                         <img src="images/artemis III.jpeg" class="card-img-top" alt="imagen de artemis III">
                         <div class="card-body">
                             <!-- Título principal de la noticia -->
@@ -112,7 +112,7 @@
                 <!-- Tarjeta con noticia sobre astronauta Mike Fincke -->
                 <div class="col-5">
                     <!-- Tarjeta de Bootstrap con imagen, título y descripción -->
-                    <div class="card mb-3">
+                    <div class="card mb-3" id="post-2">
                         <img src="images/mike fincke.jpg" class="card-img-top" alt="imagen de Mike Fincke">
                         <div class="card-body">
                             <!-- Título de la noticia sobre incidente médico -->
@@ -132,7 +132,7 @@
                     <!-- Primera tarjeta: Noticia sobre investigación de Europa contra X -->
                     <div class="row">
                         <div class="col">
-                            <div class="card h-100">
+                            <div class="card h-100" id="post-3">
                                 <img src="images/grook.jpg" class="card-img-top" alt="imagen de Grok">
                                 <div class="card-body">
                                     <!-- Título sobre investigación de privacidad de X por IA Grok -->
@@ -147,7 +147,7 @@
                     <div class="row mt-2">
                         <!-- Título sobre dimisión del CEO del Foro Económico Mundial -->
                         <div class="col">
-                            <div class="card h-100">
+                            <div class="card h-100" id="post-4">
                                 <img src="images/foto economico.jpg" class="card-img-top"
                                     alt="imagen de foto economico">
                                 <div class="card-body">
@@ -198,8 +198,9 @@
                                 <button type="button" 
                                         class="btn btn-lg btn-danger" 
                                         data-bs-toggle="popover" 
-                                        data-bs-title="Popover title" 
-                                        data-bs-content="Imagen relacionada con ciencia">Click aqui para ver descripción</button>
+                                        data-bs-placement="top"
+                                        data-bs-title="Descripción de la imagen" 
+                                        data-bs-content="Estudiantes explorando conceptos cuánticos en un laboratorio de física avanzada, utilizando equipos de medición y computadoras para analizar datos experimentales.">Click aqui para ver descripción</button>
                                 <!-- Enlace que abre el modal de suscripción -->
                                 <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
                             </div>
@@ -217,8 +218,9 @@
                                 <button type="button"
                                         class="btn btn-lg btn-danger" 
                                         data-bs-toggle="popover" 
-                                        data-bs-title="Popover title" 
-                                        data-bs-content="Imagen relacionada con ciencia">Click aqui para ver descripción</button>
+                                        data-bs-placement="top"
+                                        data-bs-title="Descripción de la imagen" 
+                                        data-bs-content="Estudiantes realizando experimentos prácticos en física cuántica, manipulando equipos de laboratorio y analizando resultados en tiempo real con software especializado.">Click aqui para ver descripción</button>
                                 <!-- Enlace de suscripción -->
                                 <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
                             </div>
@@ -235,8 +237,9 @@
                                 <button type="button"
                                         class="btn btn-lg btn-danger" 
                                         data-bs-toggle="popover" 
-                                        data-bs-title="Popover title" 
-                                        data-bs-content="Imagen relacionada con ciencia">Click aqui para ver descripción</button>
+                                        data-bs-placement="top"
+                                        data-bs-title="Descripción de la imagen" 
+                                        data-bs-content="Científicos explorando el cosmos durante una sesión nocturna de laboratorio, utilizando telescopios y equipos de observación astronómica para estudiar fenómenos celestes.">Click aqui para ver descripción</button>
                                 <!-- Enlace para suscripción -->
                                 <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
                             </div>
@@ -356,7 +359,7 @@
             <div class="row">
                 <div class="col">
                 <!-- Sección con contenido multimedia (video) -->
-                 <h3 class = "text-center">Video: El Futuro del Diseño Web</h3>
+                <h3 class = "text-center">Video: El Futuro del Diseño Web</h3>
         <section class="d-flex mb-5 ms-5 me-5">
             <!-- Insertar video de YouTube -->
             <iframe width="100%" height="600" src="https://www.youtube.com/embed/wZniZEbPAzk?si=FfziH2dMP-VOwnX_"
@@ -389,66 +392,7 @@
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
-    <!-- Sección de formulario de contacto para que los usuarios envíen consultas -->
-    <div class="contactanos">
-        <!-- Título principal de la sección de contacto -->
-        <h2 class="container">Contacto</h2>
-        <!-- Formulario Bootstrap con contenedor centrado -->
-        <form class = "container">
-        
-        <!-- CAMPO 1: Dirección de correo electrónico -->
-        <div class="mb-3">
-            <!-- Etiqueta para el campo de email (mb-3 = margen inferior de 3 unidades) -->
-            <label for="exampleInputEmail1" class="form-label">Dirección de correo electronico</label>
-            <!-- Campo de entrada de email con validación HTML5 -->
-            <!-- aria-describedby="emailHelp" vincula esta entrada con el texto de ayuda -->
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <!-- Texto de ayuda que aparece debajo del campo -->
-            <div id="emailHelp" class="form-text">Tu correo no será compartido con terceros.</div>
-        </div>
-        
-        <!-- CAMPO 2: Textarea para describir la inquietud/mensaje del usuario -->
-        <div class="mb-3">
-            <!-- Etiqueta para el área de texto -->
-            <label for="exampleInputPassword1" class="form-label">Describe tu inquietud</label>
-            <!-- Área de texto para que el usuario escriba su mensaje (múltiples líneas) -->
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-        
-        <!-- CAMPO 3: Checkbox para consentimiento de notificaciones -->
-        <div class="mb-3 form-check">
-            <!-- Checkbox que permite al usuario optar por recibir notificaciones -->
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <!-- Etiqueta asociada al checkbox -->
-            <label class="form-check-label" for="exampleCheck1">Deseo recibir notificaciones</label>
-        </div>
-        
-        <!-- BOTÓN DE ENVÍO -->
-        <!-- El atributo id="mostrarAlerta" vincula este botón con el JavaScript para mostrar la alerta -->
-        <button type="button" class="btn btn-primary" id="mostrarAlerta">Enviar</button>
-        </form>
-    </div>
-
-    <!-- ALERTA DE CONFIRMACIÓN (inicialmente oculta con clase "d-none") -->
-    <!-- Esta alerta se muestra cuando el usuario hace clic en el botón "Enviar" -->
-    <!-- role="alert" asegura que los lectores de pantalla la anuncien como alerta -->
-    <!-- id="miAlerta" se usa para seleccionar este elemento en JavaScript -->
-    <div class="alert alert-warning alert-dismissible fade d-none mt-3 contactanos" role="alert" id="miAlerta">
-        <!-- Texto principal de la alerta -->
-        <!-- <strong> hace el texto más destacado -->
-        <strong>Completado</strong> Mensaje enviado correctamente. Nos pondremos en contacto contigo lo antes posible.
-        <!-- Botón para cerrar la alerta manualmente (data-bs-dismiss="alert" realiza esta acción) -->
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
-    </div>
-
     </main>
-
-    <!-- Archivos y cdns -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
 
     <!-- Pie de página -->
     <footer class="bg-dark text-light p-5 mt-5">
@@ -461,9 +405,9 @@
                     <div class="col-5 text-start">
                         <h6>Archivos importantes</h6>
                         <ol>
-                            <li><a>Términos y condiciones</a></li>
+                            <li><a href="terminos_condiciones.html">Términos y condiciones</a></li>
                             <li><a>Política de privacidad</a></li>
-                            <li><a>Contacto</a></li>
+                            <li><a href="contact.html">Contacto</a></li>
                         </ol>
                     </div>
                     <div class="col-5">
@@ -476,8 +420,11 @@
             </div>
     </footer>
 
+    <!-- Archivos y cdns -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
 </body>
-
-
-
 </html>
