@@ -10,18 +10,35 @@
     <meta name="robots" content="index, follow">
     <title>The Science Times</title>
     <link rel="icon" type="image/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- Importar hoja de estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-light">
+<body>
     <!-- Encabezado principal del sitio web -->
     <header class="nyt-header">
-        <h1 class="logo">THE SCIENCE TIMES</h1>
-        <hr>
-        <p class="fecha-nyt">Fecha actual</p>
-        <hr class="double-line">
+        <div class="row">
+            <div class="col-8">
+                <h1 class="logo">THE SCIENCE TIMES</h1>
+            </div>
+            <div class="col-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="logo-modo bi bi-sun-fill" viewBox="0 0 16 16" id="toggle-mode">
+                    <path
+                        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                </svg>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <p class="fecha-nyt" id="fecha-actual">Fecha actual</p>
+            <hr class="double-line">
+        </div>
+
     </header>
 
     <!-- Modal de términos y condiciones para suscripción -->
@@ -33,8 +50,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Al hacer clic en "Aceptar", te suscribes a nuestro boletín de noticias. Nos comprometemos a enviarte únicamente contenido relevante sobre física y computación. 
-                        Tus datos están protegidos bajo nuestra política de privacidad: no compartimos tu información con terceros y puedes darte de baja en cualquier momento haciendo 
+                    <p>Al hacer clic en "Aceptar", te suscribes a nuestro boletín de noticias. Nos comprometemos a
+                        enviarte únicamente contenido relevante sobre física y computación.
+                        Tus datos están protegidos bajo nuestra política de privacidad: no compartimos tu información
+                        con terceros y puedes darte de baja en cualquier momento haciendo
                         clic en el enlace al pie de nuestros correos.</p>
                 </div>
                 <div class="modal-footer">
@@ -46,40 +65,38 @@
     </div>
 
     <!-- Barra de navegación principal -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg" id="mi-nav">
         <div class="container-fluid">
 
             <!-- Botón para desplegar menú en dispositivos móviles -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido"
+                aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Elementos de navegación (menú principal) -->
             <div class="collapse navbar-collapse justify-content-evenly" id="navbarContenido">
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-auto" id="nav-text">
                     <li class="nav-item mx-3">
-                        <a class="nav-link active text-dark" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-dark" href="#">Astrofisica</a>
+                        <a class="nav-link" href="https://www.instagram.com">Instagram</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-dark" href="#">Computación Cuántica</a>
+                        <a class="nav-link" href="https://www.facebook.com">Facebook</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-dark" href="#">IA</a>
+                        <a class="nav-link" href="https://www.tiktok.com">Tiktok</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-dark" href="#">Ciberseguridad</a>
+                        <a class="nav-link" href="https://www.youtube.com">Youtube</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-dark" href="#">Hardware</a>
+                        <a class="nav-link" href="#">Noticias</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link text-dark" href="#">Laboratorio</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link text-dark" href="#">Noticias</a>
+                        <a class="nav-link" href="contact.html">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -170,110 +187,110 @@
                 <div class="col-6">
                     <!-- Contenedor principal del carrusel con ID único para referencias -->
                     <div id="carouselExampleDark" class="carousel carousel-dark slide m-4">
-                    
-                    <!-- Indicadores del carrusel: puntos de navegación para cada slide -->
-                    <div class="carousel-indicators">
-                        <!-- Indicador para el slide 1 (activo por defecto) -->
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <!-- Indicador para el slide 2 -->
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <!-- Indicador para el slide 3 -->
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+
+                        <!-- Indicadores del carrusel: puntos de navegación para cada slide -->
+                        <div class="carousel-indicators">
+                            <!-- Indicador para el slide 1 (activo por defecto) -->
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <!-- Indicador para el slide 2 -->
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <!-- Indicador para el slide 3 -->
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+
+                        <!-- Contenedor con los slides (elementos intercambiables) -->
+                        <div class="carousel-inner">
+                            <!-- SLIDE 1: Estudiantes en laboratorio de física (activo por defecto) -->
+                            <!-- data-bs-interval="10000" = el slide se muestra durante 10 segundos -->
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <!-- Imagen del slide con clase w-100 para ancho completo -->
+                                <img src="images/estudiantes-exploracion-cuantica-laboratorio-fisica_839035-738902.avif"
+                                    class="d-block w-100" alt="imagen, estudiantes en laboratorio de física">
+                                <!-- Leyenda sobre la imagen (visible solo en pantallas medianas y mayores) -->
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- Botón que abre un popover con información sobre la imagen -->
+                                    <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover"
+                                        data-bs-placement="top" data-bs-title="Descripción de la imagen"
+                                        data-bs-content="Estudiantes explorando conceptos cuánticos en un laboratorio de física avanzada, utilizando equipos de medición y computadoras para analizar datos experimentales.">Click
+                                        aqui para ver descripción</button>
+                                    <!-- Enlace que abre el modal de suscripción -->
+                                    <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal"
+                                            href="#">Haz click aqui para suscribirte</a></p>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 2: Otro momento del laboratorio de física -->
+                            <!-- data-bs-interval="2000" = el slide se muestra durante 2 segundos -->
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <!-- Imagen del segundo slide -->
+                                <img src="images/estudiantes-exploracion-cuantica-laboratorio-fisica_839035-739135.avif"
+                                    class="d-block w-100" alt="imagen, estudiantes en laboratorio de física">
+                                <!-- Leyenda del segundo slide con botones interactivos -->
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- Botón de descripción -->
+                                    <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover"
+                                        data-bs-placement="top" data-bs-title="Descripción de la imagen"
+                                        data-bs-content="Estudiantes realizando experimentos prácticos en física cuántica, manipulando equipos de laboratorio y analizando resultados en tiempo real con software especializado.">Click
+                                        aqui para ver descripción</button>
+                                    <!-- Enlace de suscripción -->
+                                    <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal"
+                                            href="#">Haz click aqui para suscribirte</a></p>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 3: Científicos explorando el cosmos -->
+                            <div class="carousel-item">
+                                <!-- Imagen del tercer slide (sin data-bs-interval, usa el intervalo por defecto) -->
+                                <img src="images/explorando-cosmos-noche-cientificos-laboratorio_1164924-17751.avif"
+                                    class="d-block w-100"
+                                    alt="imagen, explorando el cosmos en una noche de laboratorio">
+                                <!-- Leyenda del tercer slide -->
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- Botón para ver descripción de la imagen -->
+                                    <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover"
+                                        data-bs-placement="top" data-bs-title="Descripción de la imagen"
+                                        data-bs-content="Científicos explorando el cosmos durante una sesión nocturna de laboratorio, utilizando telescopios y equipos de observación astronómica para estudiar fenómenos celestes.">Click
+                                        aqui para ver descripción</button>
+                                    <!-- Enlace para suscripción -->
+                                    <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal"
+                                            href="#">Haz click aqui para suscribirte</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón para retroceder al slide anterior -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <!-- Icono de flecha izquierda -->
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <!-- Texto para lectores de pantalla -->
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+
+                        <!-- Botón para avanzar al siguiente slide -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <!-- Icono de flecha derecha -->
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <!-- Texto para lectores de pantalla -->
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
                     </div>
-                    
-                    <!-- Contenedor con los slides (elementos intercambiables) -->
-                    <div class="carousel-inner">
-                        <!-- SLIDE 1: Estudiantes en laboratorio de física (activo por defecto) -->
-                        <!-- data-bs-interval="10000" = el slide se muestra durante 10 segundos -->
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <!-- Imagen del slide con clase w-100 para ancho completo -->
-                            <img src="images/estudiantes-exploracion-cuantica-laboratorio-fisica_839035-738902.avif"
-                                class="d-block w-100" alt="imagen, estudiantes en laboratorio de física">
-                            <!-- Leyenda sobre la imagen (visible solo en pantallas medianas y mayores) -->
-                            <div class="carousel-caption d-none d-md-block">
-                                <!-- Botón que abre un popover con información sobre la imagen -->
-                                <button type="button" 
-                                        class="btn btn-lg btn-danger" 
-                                        data-bs-toggle="popover" 
-                                        data-bs-placement="top"
-                                        data-bs-title="Descripción de la imagen" 
-                                        data-bs-content="Estudiantes explorando conceptos cuánticos en un laboratorio de física avanzada, utilizando equipos de medición y computadoras para analizar datos experimentales.">Click aqui para ver descripción</button>
-                                <!-- Enlace que abre el modal de suscripción -->
-                                <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
-                            </div>
-                        </div>
-                        
-                        <!-- SLIDE 2: Otro momento del laboratorio de física -->
-                        <!-- data-bs-interval="2000" = el slide se muestra durante 2 segundos -->
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <!-- Imagen del segundo slide -->
-                            <img src="images/estudiantes-exploracion-cuantica-laboratorio-fisica_839035-739135.avif"
-                                class="d-block w-100" alt="imagen, estudiantes en laboratorio de física">
-                            <!-- Leyenda del segundo slide con botones interactivos -->
-                            <div class="carousel-caption d-none d-md-block">
-                                <!-- Botón de descripción -->
-                                <button type="button"
-                                        class="btn btn-lg btn-danger" 
-                                        data-bs-toggle="popover" 
-                                        data-bs-placement="top"
-                                        data-bs-title="Descripción de la imagen" 
-                                        data-bs-content="Estudiantes realizando experimentos prácticos en física cuántica, manipulando equipos de laboratorio y analizando resultados en tiempo real con software especializado.">Click aqui para ver descripción</button>
-                                <!-- Enlace de suscripción -->
-                                <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
-                            </div>
-                        </div>
-                        
-                        <!-- SLIDE 3: Científicos explorando el cosmos -->
-                        <div class="carousel-item">
-                            <!-- Imagen del tercer slide (sin data-bs-interval, usa el intervalo por defecto) -->
-                            <img src="images/explorando-cosmos-noche-cientificos-laboratorio_1164924-17751.avif"
-                                class="d-block w-100" alt="imagen, explorando el cosmos en una noche de laboratorio">
-                            <!-- Leyenda del tercer slide -->
-                            <div class="carousel-caption d-none d-md-block">
-                                <!-- Botón para ver descripción de la imagen -->
-                                <button type="button"
-                                        class="btn btn-lg btn-danger" 
-                                        data-bs-toggle="popover" 
-                                        data-bs-placement="top"
-                                        data-bs-title="Descripción de la imagen" 
-                                        data-bs-content="Científicos explorando el cosmos durante una sesión nocturna de laboratorio, utilizando telescopios y equipos de observación astronómica para estudiar fenómenos celestes.">Click aqui para ver descripción</button>
-                                <!-- Enlace para suscripción -->
-                                <p><a class="btn-primary" data-bs-toggle="modal" data-bs-target="#miModal" href="#">Haz click aqui para suscribirte</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Botón para retroceder al slide anterior -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide="prev">
-                        <!-- Icono de flecha izquierda -->
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <!-- Texto para lectores de pantalla -->
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    
-                    <!-- Botón para avanzar al siguiente slide -->
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide="next">
-                        <!-- Icono de flecha derecha -->
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <!-- Texto para lectores de pantalla -->
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
                 </div>
-                </div>
-                
+
                 <!-- Columna derecha: Descripción y propósito del sitio web -->
                 <div class="col-6 d-flex flex-column align-items-center justify-content-center">
                     <!-- Título principal que expresa el concepto del sitio -->
                     <h2 class="display-4">El Nexo entre la Materia y el Código</h2>
                     <!-- Párrafo descriptivo con la misión de la plataforma -->
-                    <p class="h3 text-center mt-4 fw-normal text-muted" style="font-family: Arial, Helvetica, sans-serif;">Somos un espacio dedicado a explorar las fronteras del conocimiento humano. 
-                        En nuestra plataforma, la física fundamental y la computación de vanguardia convergen para explicar el mundo que nos rodea. 
-                        Desde las leyes que rigen el cosmos hasta los algoritmos que definen nuestro futuro digital, 
+                    <p class="h3 text-center mt-4 fw-normal" style=" margin-right: 20px;">Somos un espacio dedicado
+                        a explorar las fronteras del conocimiento humano.
+                        En nuestra plataforma, la física fundamental y la computación de vanguardia convergen para
+                        explicar el mundo que nos rodea.
+                        Desde las leyes que rigen el cosmos hasta los algoritmos que definen nuestro futuro digital,
                         buscamos hacer de la ciencia un lenguaje accesible y apasionante para todos.</p>
                 </div>
             </div>
@@ -285,72 +302,82 @@
             <h1>Preguntas frecuentes</h1>
             <!-- Acordeón Bootstrap: componente que permite expandir/contraer elementos -->
             <div class="accordion container" id="accordionPanelsStayOpenExample">
-            
-            <!-- PREGUNTA 1: Objetivo del sitio web -->
-            <div class="accordion-item">
-                <!-- Encabezado del acordeón -->
-                <h2 class="accordion-header">
-                <!-- Botón colapsable: cuando se hace clic, expande o contrae la respuesta -->
-                <!-- data-bs-toggle="collapse" activa la funcionalidad de colapso -->
-                <!-- data-bs-target="#panelsStayOpen-collapseOne" vincula este botón con su contenido correspondiente -->
-                <!-- aria-expanded="true" indica que el elemento está expandido por defecto -->
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    ¿Cuál es el objetivo principal de este sitio web?
-                </button>
-                </h2>
-                <!-- Contenedor que se expande/contrae al hacer clic en el botón -->
-                <!-- La clase "show" hace que esté expandido por defecto -->
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                <!-- Cuerpo del acordeón con la respuesta a la pregunta -->
-                <div class="accordion-body">
-                    Nuestra misión es explorar la intersección entre las leyes fundamentales de la física y el poder de la computación. 
-                    Buscamos divulgar avances científicos y tecnológicos de manera clara, desde la mecánica cuántica hasta el desarrollo de inteligencia artificial.
+
+                <!-- PREGUNTA 1: Objetivo del sitio web -->
+                <div class="accordion-item">
+                    <!-- Encabezado del acordeón -->
+                    <h2 class="accordion-header">
+                        <!-- Botón colapsable: cuando se hace clic, expande o contrae la respuesta -->
+                        <!-- data-bs-toggle="collapse" activa la funcionalidad de colapso -->
+                        <!-- data-bs-target="#panelsStayOpen-collapseOne" vincula este botón con su contenido correspondiente -->
+                        <!-- aria-expanded="true" indica que el elemento está expandido por defecto -->
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            ¿Cuál es el objetivo principal de este sitio web?
+                        </button>
+                    </h2>
+                    <!-- Contenedor que se expande/contrae al hacer clic en el botón -->
+                    <!-- La clase "show" hace que esté expandido por defecto -->
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <!-- Cuerpo del acordeón con la respuesta a la pregunta -->
+                        <div class="accordion-body">
+                            Nuestra misión es explorar la intersección entre las leyes fundamentales de la física y el
+                            poder de la computación.
+                            Buscamos divulgar avances científicos y tecnológicos de manera clara, desde la mecánica
+                            cuántica hasta el desarrollo de inteligencia artificial.
+                        </div>
+                    </div>
                 </div>
+
+                <!-- PREGUNTA 2: Nivel de conocimientos requerido -->
+                <div class="accordion-item">
+                    <!-- Encabezado del acordeón para la segunda pregunta -->
+                    <h2 class="accordion-header">
+                        <!-- Botón colapsable para la segunda pregunta -->
+                        <!-- data-bs-target="#panelsStayOpen-collapseTwo" vincula este botón con su respuesta -->
+                        <!-- La clase "collapsed" indica que está contraído por defecto -->
+                        <!-- aria-expanded="false" confirma que el elemento está contraído -->
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            ¿Necesito conocimientos avanzados para entender el contenido?
+                        </button>
+                    </h2>
+                    <!-- Contenedor colapsable para la segunda respuesta (contraído por defecto) -->
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <!-- Cuerpo con la respuesta a la segunda pregunta -->
+                        <div class="accordion-body">
+                            No. Aunque tratamos temas complejos, nuestros artículos están redactados para ser accesibles
+                            tanto para entusiastas que están comenzando como para estudiantes
+                            de ciencias e ingeniería que buscan profundizar en conceptos específicos.
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- PREGUNTA 2: Nivel de conocimientos requerido -->
-            <div class="accordion-item">
-                <!-- Encabezado del acordeón para la segunda pregunta -->
-                <h2 class="accordion-header">
-                <!-- Botón colapsable para la segunda pregunta -->
-                <!-- data-bs-target="#panelsStayOpen-collapseTwo" vincula este botón con su respuesta -->
-                <!-- La clase "collapsed" indica que está contraído por defecto -->
-                <!-- aria-expanded="false" confirma que el elemento está contraído -->
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    ¿Necesito conocimientos avanzados para entender el contenido?
-                </button>
-                </h2>
-                <!-- Contenedor colapsable para la segunda respuesta (contraído por defecto) -->
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                <!-- Cuerpo con la respuesta a la segunda pregunta -->
-                <div class="accordion-body">
-                    No. Aunque tratamos temas complejos, nuestros artículos están redactados para ser accesibles tanto para entusiastas que están comenzando como para estudiantes 
-                    de ciencias e ingeniería que buscan profundizar en conceptos específicos.
+
+                <!-- PREGUNTA 3: Frecuencia de actualizaciones -->
+                <div class="accordion-item">
+                    <!-- Encabezado del acordeón para la tercera pregunta -->
+                    <h2 class="accordion-header">
+                        <!-- Botón colapsable para la tercera pregunta -->
+                        <!-- data-bs-target="#panelsStayOpen-collapseThree" vincula este botón con su respuesta -->
+                        <!-- aria-expanded="false" indica que está contraído por defecto -->
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            ¿Con qué frecuencia se actualizan las noticias y artículos?
+                        </button>
+                    </h2>
+                    <!-- Contenedor colapsable para la tercera respuesta -->
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <!-- Cuerpo con la respuesta a la tercera pregunta -->
+                        <div class="accordion-body">
+                            Mantenemos un ritmo de actualización constante. Publicamos análisis detallados y noticias de
+                            última hora
+                            —como las misiones Artemis de la NASA o regulaciones de IA en Europa— de forma semanal.
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
-            
-            <!-- PREGUNTA 3: Frecuencia de actualizaciones -->
-            <div class="accordion-item">
-                <!-- Encabezado del acordeón para la tercera pregunta -->
-                <h2 class="accordion-header">
-                <!-- Botón colapsable para la tercera pregunta -->
-                <!-- data-bs-target="#panelsStayOpen-collapseThree" vincula este botón con su respuesta -->
-                <!-- aria-expanded="false" indica que está contraído por defecto -->
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    ¿Con qué frecuencia se actualizan las noticias y artículos?
-                </button>
-                </h2>
-                <!-- Contenedor colapsable para la tercera respuesta -->
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <!-- Cuerpo con la respuesta a la tercera pregunta -->
-                <div class="accordion-body">
-                    Mantenemos un ritmo de actualización constante. Publicamos análisis detallados y noticias de última hora 
-                    —como las misiones Artemis de la NASA o regulaciones de IA en Europa— de forma semanal.
-                </div>
-                </div>
-            </div>
             </div>
         </div>
 
@@ -358,39 +385,40 @@
         <div>
             <div class="row">
                 <div class="col">
-                <!-- Sección con contenido multimedia (video) -->
-                <h3 class = "text-center">Video: El Futuro del Diseño Web</h3>
-        <section class="d-flex mb-5 ms-5 me-5">
-            <!-- Insertar video de YouTube -->
-            <iframe width="100%" height="600" src="https://www.youtube.com/embed/wZniZEbPAzk?si=FfziH2dMP-VOwnX_"
+                    <!-- Sección con contenido multimedia (video) -->
+                    <h3 class="text-center">Video: El Futuro del Diseño Web</h3>
+                    <section class="d-flex mb-5 ms-5 me-5">
+                        <!-- Insertar video de YouTube -->
+                        <iframe width="100%" height="600"
+                            src="https://www.youtube.com/embed/wZniZEbPAzk?si=FfziH2dMP-VOwnX_"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </section>
+                </div>
+                <div class="col">
+                    <!-- Sección con mapa de ubicación -->
+                    <h3 class="text-center">Visítanos en nuestra sede</h3>
+                    <section class="mb-5 ms-5 me-5">
+                        <!-- Insertar mapa de Google Maps -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123!2d-69.940!3d18.484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf898444a77323%3A0x1384061807d9f957!2sUNPHU!5e0!3m2!1ses!2sdo!4v1620000000000!5m2!1ses!2sdo"
+                            width="100%" height="600" style="border:0;" allowfullscreen=""></iframe>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Widget fijo en la esquina inferior derecha (noticia en vivo) -->
+        <div class="news-fixed">
+            <p>En vivo</p>
+            <!-- Video en vivo incrustado -->
+            <iframe width="150" height="100" src="https://www.youtube.com/embed/gsMofms3Ztg?si=fNGbj4QF8_E1UUHr"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
-                </div>
-                <div class="col">
-                <!-- Sección con mapa de ubicación -->
-                <h3 class = "text-center">Visítanos en nuestra sede</h3>
-        <section class="mb-5 ms-5 me-5">
-            <!-- Insertar mapa de Google Maps -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123!2d-69.940!3d18.484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf898444a77323%3A0x1384061807d9f957!2sUNPHU!5e0!3m2!1ses!2sdo!4v1620000000000!5m2!1ses!2sdo"
-                width="100%" height="600" style="border:0;" allowfullscreen=""></iframe>
-        </section>
-                </div>
-            </div>
-            </div>
-        
-
-    <!-- Widget fijo en la esquina inferior derecha (noticia en vivo) -->
-    <div class="news-fixed">
-        <p>En vivo</p>
-        <!-- Video en vivo incrustado -->
-        <iframe width="150" height="100" src="https://www.youtube.com/embed/gsMofms3Ztg?si=fNGbj4QF8_E1UUHr"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+        </div>
 
     </main>
 
@@ -405,13 +433,29 @@
                     <div class="col-5 text-start">
                         <h6>Archivos importantes</h6>
                         <ol>
-                            <li><a href="terminos_condiciones.html">Términos y condiciones</a></li>
-                            <li><a>Política de privacidad</a></li>
-                            <li><a href="contact.html">Contacto</a></li>
+                            <li><a href="terminos_condiciones.html" class="footer_elements">Términos y condiciones</a>
+                            </li>
+                            <li><a href="privacidad.html" class="footer_elements">Política de privacidad</a></li>
+                            <li><a href="contact.html" class="footer_elements">Contacto</a></li>
                         </ol>
                     </div>
                     <div class="col-5">
-                        <h6>Redes sociales</h6>
+                        <div class="row">
+                            <h6>Redes sociales</h6>
+                        </div>
+                        <a href="https://www.instagram.com/estarlinlopez46?igsh=MTNybWZua21mcGVnbg==" target="_blank"
+                            rel="noopener noreferrer" class="icons">
+                            <i class="bi bi-instagram m-2"></i> <!-- Instagram -->
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="icons">
+                            <i class="bi bi-facebook m-2"></i> <!-- Facebook -->
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="icons">
+                            <i class="bi bi-youtube m-2"></i> <!-- YouTube -->
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="icons">
+                            <i class="bi bi-tiktok m-2"></i> <!-- TikTok -->
+                        </a>
                     </div>
                     <div class="col-2">
                         <h6>Post publicados</h6>
@@ -421,10 +465,12 @@
     </footer>
 
     <!-- Archivos y cdns -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
 </body>
+
 </html>
