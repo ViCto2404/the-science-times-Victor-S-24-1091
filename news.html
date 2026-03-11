@@ -7,12 +7,14 @@
     <meta name="author" content="Victor Estarlin Sepulveda Lopez / 24-1091">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>Contacto</title>
+    <title>Noticias</title>
     <link rel="icon" type="image/png" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- Importar hoja de estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Encabezado principal del sitio web -->
@@ -37,7 +39,7 @@
 
     </header>
 
-    <!-- Barra de navegación principal -->
+        <!-- Barra de navegación principal -->
     <nav class="navbar navbar-expand-lg" id="mi-nav">
         <div class="container-fluid">
 
@@ -77,65 +79,51 @@
     </nav>
     <hr class="double-line">
 
-    <!-- Sección de formulario de contacto para que los usuarios envíen consultas -->
-    <div class="contactanos">
-        <!-- Título principal de la sección de contacto -->
-        <h2 class="container">Contacto</h2>
-        <!-- Formulario Bootstrap con contenedor centrado -->
-        <form action="mailto:starlin2404@gmail.com" method="post" enctype="text/plain" class = "container">
-        
-        <!-- CAMPO 1: Dirección de correo electrónico -->
-        <div class="mb-3">
-            <!-- Etiqueta para el campo de email (mb-3 = margen inferior de 3 unidades) -->
-            <label for="exampleInputEmail1" class="form-label">Dirección de correo electronico</label>
-            <!-- Campo de entrada de email con validación HTML5 -->
-            <!-- aria-describedby="emailHelp" vincula esta entrada con el texto de ayuda -->
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <!-- Texto de ayuda que aparece debajo del campo -->
-            <div id="emailHelp" class="form-text">Tu correo no será compartido con terceros.</div>
+    <main>
+        <h1>Ultimas noticias publicadas</h1>
+        <div class="dimension">
+            <div class="row mb-4">
+                <div class="col-3">
+                    <img src = "images/artemis III.jpeg" alt="Imagen de la misión Artemis III" class="img-fluid" width="500px" height="auto">
+                </div>
+                <div class="col-9 d-flex flex-column justify-content-center">
+                    <h2>La NASA añade abruptamente un nuevo paso en su camino hacia el alunizaje mientras se avecina una carrera con China</h2>
+                    <p>La NASA reestructura el programa Artemis: se añade una misión tripulada adicional en 2027 antes de intentar el próximo alunizaje. Conoce los detalles del cambio de planes y los retos técnicos que enfrentan SpaceX y Blue Origin.</p>
+                    
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-3">
+                    <img src = "images/foto economico.jpg" alt="Imagen de la noticia económica" class="img-fluid" width="500px" height="auto">
+                </div>
+                <div class="col-9 d-flex flex-column justify-content-center">
+                    <h2>Los archivos de Epstein le cuestan el puesto al CEO del Foro Económico Mundial de Davos</h2>
+                    <p>Los archivos de Epstein fuerzan la dimisión del presidente del Foro Económico Mundial.</p>
+                    
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-3">
+                    <img src = "images/grook.jpg" alt="Imagen de Grok" class="img-fluid" width="500px" height="auto">
+                </div>
+                <div class="col-9 d-flex flex-column justify-content-center">
+                    <h2>Europa inicia una investigación masiva contra X por fallos de privacidad.</h2>
+                    <p>Europa investiga a X por la generación de imágenes sexualizadas mediante su IA Grok.</p>
+                    
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-3">
+                    <img src = "images/mike fincke.jpg" alt="Imagen de Mike Fincke" class="img-fluid" width="500px" height="auto">
+                </div>
+                <div class="col-9 d-flex flex-column justify-content-center">
+                    <h2>El astronauta Mike Fincke confirma que su problema médico forzó el fin anticipado de la misión de la NASA</h2>
+                    <p>El veterano astronauta Mike Fincke confirma ser el protagonista del reciente incidente médico en la Estación Espacial Internacional. Este suceso marca la primera vez en la historia que la NASA debe acortar una misión por razones de salud.</p>
+                    
+                </div>
+            </div>
         </div>
-
-        <div class="mb-3">
-            <!-- Etiqueta para el campo de email (mb-3 = margen inferior de 3 unidades) -->
-            <label for="exampleInputphone" class="form-label">número de telefono</label>
-            <!-- Campo de entrada de email con validación HTML5 -->
-            <!-- aria-describedby="emailHelp" vincula esta entrada con el texto de ayuda -->
-            <input type="tel" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp">
-            <!-- Texto de ayuda que aparece debajo del campo -->
-            <div id="phoneHelp" class="form-text">Tu número de teléfono no será compartido con terceros.</div>
-        </div>
-
-        <div class="mb-3">
-            <!-- Etiqueta para el campo de email (mb-3 = margen inferior de 3 unidades) -->
-            <label for="exampleInputcountry" class="form-label">País</label>
-            <!-- Campo de entrada de email con validación HTML5 -->
-            <!-- aria-describedby="emailHelp" vincula esta entrada con el texto de ayuda -->
-            <input type="text" class="form-control" id="exampleInputcountry" aria-describedby="countryHelp">
-            <!-- Texto de ayuda que aparece debajo del campo -->
-            <div id="countryHelp" class="form-text">Por favor, ingresa tu país.</div>
-        </div>
-        
-        <!-- CAMPO 2: Textarea para describir la inquietud/mensaje del usuario -->
-        <div class="mb-3">
-            <!-- Etiqueta para el área de texto -->
-            <label for="exampleInputPassword1" class="form-label">Describe tu inquietud</label>
-            <!-- Área de texto para que el usuario escriba su mensaje (múltiples líneas) -->
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-        
-        <!-- CAMPO 3: Checkbox para consentimiento de notificaciones -->
-        <div class="mb-3 form-check">
-            <!-- Checkbox que permite al usuario optar por recibir notificaciones -->
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <!-- Etiqueta asociada al checkbox -->
-            <label class="form-check-label" for="exampleCheck1">Deseo recibir notificaciones</label>
-        </div>
-        
-        <!-- BOTÓN DE ENVÍO -->
-        <!-- El atributo id="mostrarAlerta" vincula este botón con el JavaScript para mostrar la alerta -->
-        <button type="submit" class="btn btn-primary" id="mostrarAlerta">Enviar</button>
-        </form>
-    </div>
+    </main>
 
     <!-- Pie de página -->
     <footer class="bg-dark text-light p-5 mt-5">

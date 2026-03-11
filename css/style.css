@@ -3,6 +3,10 @@
    ============================================ */
 
 /* Estilos del cuerpo principal */
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #ffffff;
     color: #333;
@@ -39,7 +43,7 @@ hr.double-line {
 }
 
 /* ============================================
-   ESTILOS DE ARTÍCULOS
+    ESTILOS DE ARTÍCULOS
    ============================================ */
 
 /* Título del artículo principal */
@@ -211,11 +215,16 @@ hr.double-line {
 }
 
 .logo-modo{
-    width: 100%;
+    width: auto;
     height: 30px;
     position: relative;
     top: 25%;
-    left: 40%;
+    left: 70%;
     cursor: pointer;
+}
+
+.dimension{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 

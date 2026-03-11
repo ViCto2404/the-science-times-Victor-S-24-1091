@@ -10,19 +10,19 @@
         console.log("Popovers inicializados:", popoverList.length);
 
         document.getElementById("post-1").onclick = function(){
-            window.location.href = "artemis.html";
+            window.location.href = "./artemis.html";
         };
 
         document.getElementById("post-2").onclick = function(){
-            window.location.href = "astronauta.html";
+            window.location.href = "./astronauta.html";
         };
 
         document.getElementById("post-3").onclick = function(){
-            window.location.href = "artemis.html";
+            window.location.href = "./artemis.html";
         };
 
         document.getElementById("post-4").onclick = function(){
-            window.location.href = "astronauta.html";
+            window.location.href = "./astronauta.html";
         };
     }
     
