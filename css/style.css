@@ -228,3 +228,54 @@ hr.double-line {
     margin-right: 20px;
 }
 
+.a-post{
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    
+    .logo-modo{
+        width: auto;
+        height: 30px;
+        position: relative;
+        top: 45%;
+        left: 43%;
+        margin: 20px;
+        cursor: pointer;
+    }
+    
+    .contactanos{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .multimedia{
+        padding-left: 10%;
+        padding-right: auto;
+    }
+
+    .title_home{
+        left: 30%;
+    }
+
+    .contenedor-post{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .contenedor-post-content{
+        margin-left: 10%;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .row{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        text-align: center;
+    }
+}

@@ -1,4 +1,4 @@
-    if(window.location.pathname.endsWith("index.html") || window.location.pathname === "/"){
+    if(window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname.endsWith("news.html")){
         // Inicializar popovers directamente ya que el script se carga al final
         console.log("Inicializando popovers...");
         const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
