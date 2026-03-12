@@ -233,6 +233,11 @@ hr.double-line {
     color: inherit;
 }
 
+.iframe_video{
+    width: 100%;
+    height: 600px;
+}
+
 @media (max-width: 768px) {
     
     .logo-modo{
@@ -277,5 +282,32 @@ hr.double-line {
 
     .logo{
         text-align: center;
+    }
+
+    .preguntas-frecuentes{
+        margin-top: 10px;
+    }
+
+    .iframe_video{
+        height: 300px;
+    }
+
+    .img_cover{
+        height: 525px;
+        object-fit:cover;
+        width:100%;
+    }
+
+    .text-white{
+        font-size:20px;
+    }
+
+    .title_home{
+        left: 23%;
+    }
+
+    .parrafo_post{
+        font-size: 30px;
+        top: 60%;
     }
 }
